@@ -24,8 +24,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-git clone https://github.com/Abhi5453Abhi/url-shortner.git
-cd url-shortner
+   git clone https://github.com/Abhi5453Abhi/url-shortner.git
+   cd url-shortner
 2. **Install dependencies:**
 
 npm install
