@@ -24,40 +24,32 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/your-username/awesome-project.git
+   git clone https://github.com/Abhi5453Abhi/awesome-project.git
    cd awesome-project
-Install dependencies:
+2. **Install dependencies:**
 
-bash
-Copy code
 npm install
-Set up MongoDB:
 
+3. **Set up MongoDB:**
 Ensure MongoDB is running locally or update the database connection string in the configuration.
-Usage
-Start the application:
 
-bash
-Copy code
+### Usage
+1. **Start the application:**
+
 npm start
 The application should now be running at http://localhost:3000.
 
-Open your web browser:
+2. **Open your web browser:**
 
 Navigate to the provided URL and use the web interface to shorten and manage URLs.
 
-Configuration
+### Configuration
 Configure the application using environment variables. Create a .env file in the project root and add the following:
 
-env
-Copy code
 MONGODB_URI=mongodb://localhost:27017/awesome-project
 PORT=3000
+
 Adjust the values based on your setup.
 
-Contributing
-Contributions are welcome! Please follow the Contribution Guidelines.
-
-License
+### License
 This project is licensed under the MIT License.
