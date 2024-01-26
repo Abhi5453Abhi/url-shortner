@@ -24,8 +24,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-   git clone https://github.com/Abhi5453Abhi/awesome-project.git
-   cd awesome-project
+   git clone https://github.com/Abhi5453Abhi/url-shortner.git
+   cd url-shortner
 2. **Install dependencies:**
 
 npm install
@@ -37,7 +37,7 @@ Ensure MongoDB is running locally or update the database connection string in th
 1. **Start the application:**
 
 npm start
-The application should now be running at http://localhost:3000.
+The application should now be running at http://localhost:8000.
 
 2. **Open your web browser:**
 
@@ -46,8 +46,8 @@ Navigate to the provided URL and use the web interface to shorten and manage URL
 ### Configuration
 Configure the application using environment variables. Create a .env file in the project root and add the following:
 
-MONGODB_URI=mongodb://localhost:27017/awesome-project
-PORT=3000
+**MONGODB_URI**=mongodb://localhost:27017/url-shortner
+PORT=8000
 
 Adjust the values based on your setup.
 
