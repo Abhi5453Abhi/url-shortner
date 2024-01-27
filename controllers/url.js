@@ -10,14 +10,20 @@ app.set('views', path.resolve('./views'));
 async function generateNewShortUrl(req, res) {
     if (!req.body || !req.body.url) return res.status(400).json({ error: 'Url is required' });
     const { url } = req.body;
-    // if (!url) return res.status(400).json({ error: 'Url is required' });
-    const shortId = nanoid(8);
-    await UrlModel.create({
-        shortId,
-        redirectUrl: url,
-        visitHistory: []
-    });
-    return res.render('home', { shortId });
+    let shortId;
+    const urlExists = await UrlModel.findOne({ redirectUrl: url }, { shortId: 1 }).lean().exec();
+    if (urlExists) {
+        shortId = urlExists.shortId;
+    } else {
+        shortId = nanoid(8);
+        await UrlModel.create({
+            shortId,
+            redirectUrl: url,
+            visitHistory: []
+        });
+    }
+    const allUrls = await UrlModel.find({});
+    return res.render('home', { shortId, allUrls });
 }
 
 async function getShortenedUrl(req, res) {
