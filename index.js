@@ -9,6 +9,9 @@ const urlRoute = require('./routes/url');
 const app = express();
 const PORT = process.env.PORT || 8001;
 
+console.log({ mongodbURL });
+console.log({ PORT });
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
