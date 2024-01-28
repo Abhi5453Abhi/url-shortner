@@ -3,7 +3,10 @@ const { generateNewShortUrl, getShortenedUrl, getShortenedUrlAnalytics } = requi
 
 const router = express.Router();
 
-router.post('/', generateNewShortUrl);
+router.post('/', async (req, res) => {
+    const customUrl = "http://google.com"; // Set your custom URL here or leave it as null
+    await generateNewShortUrl(req, res, null);
+});
 
 router.get('/:shortId', getShortenedUrl);
 
